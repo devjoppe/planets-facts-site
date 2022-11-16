@@ -16,6 +16,6 @@
 .prettierignore
 
 # My ignore
-/design/
-/Ref/
-/starter-code/
+/design
+/Ref
+/starter-code

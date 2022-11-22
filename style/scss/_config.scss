@@ -70,4 +70,29 @@ p {
     margin: 0;
 }
 
+body {
+    background: $color-primary-dark-blue;
+}
+
 // Components
+button {
+    font-family: $font-spartan-paragraph;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 25px;
+    letter-spacing: 2.5px;
+    color: $color-primary-white;
+    background: $color-primary-dark-blue;
+    border: 1px solid $color-primary-middle-blue;
+    padding: 12px 28px 12px 28px;
+    text-transform: uppercase;
+    cursor: pointer;
+    span {
+        margin-right: 28px;
+        color: $color-primary-white;
+        opacity: 0.5;
+    }
+    &:hover {
+        background: $color-primary-middle-blue;
+    }
+}

@@ -1,0 +1,20 @@
+@use 'config';
+
+.header {
+  height: 85px;
+  width: 100%;
+  display: flex;
+  border-bottom: 1px solid red;
+  justify-content: center;
+}
+
+.header--wrapper {
+  width: 1440px;
+  display: flex;
+  height: inherit;
+}
+
+.nav--item {
+  font-size: 11px;
+
+}

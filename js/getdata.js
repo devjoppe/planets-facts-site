@@ -1,10 +1,11 @@
-document.addEventListener('DOMContentLoaded', async () =>  {
+const getPlanets = async ()  => {
     try {
-        const data = await getPlanets();
+        const data = await fetchPlanets();
         console.log("From EventListener: ", data);
-        renderMenu(data);
+        //renderMenu(data);
+        return data;
     }
     catch (e) {
         console.log(e);
     }
-})
+}

@@ -4,7 +4,7 @@ const API_KEY = "";
 const BASE_URL = "json/";
 const SOURCE = "data.json";
 
-const getPlanets = async () => {
+const fetchPlanets = async () => {
 
     const response = await fetch(`${BASE_URL}${SOURCE}`);
 

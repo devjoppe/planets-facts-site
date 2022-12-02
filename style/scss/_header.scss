@@ -1,0 +1,55 @@
+@use 'config';
+
+.header {
+  height: 85px;
+  width: 100%;
+  display: flex;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  justify-content: center;
+}
+
+.header--wrapper {
+  width: 1440px;
+  display: flex;
+  height: inherit;
+  justify-content: space-between;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  text-transform: uppercase;
+  font-weight: 400;
+  span {
+    font-family: config.$font-antonio-headers;
+    font-size: 28px;
+    letter-spacing: -1px;
+    color: config.$color-primary-white;
+  }
+}
+
+nav {
+  display: flex;
+  flex-direction: row;
+}
+
+.nav--item {
+  display: flex;
+  height: 85px;
+  align-items: center;
+  font-size: 11px;
+  color: rgba(255, 255, 255, 0.75);
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-weight: 700;
+  margin-right: 32px;
+  box-sizing: border-box;
+  opacity: 0.75;
+  &:last-child {
+    margin-right: 0;
+  }
+  &:hover{
+    border-top: 3px solid red;
+    opacity: 1;
+  }
+}

@@ -5,7 +5,7 @@ const renderMenu = async () => {
     const data = await getPlanets();
     planetData = data;
     const menuItems = data.map(item => `
-        <a class="nav--item" href="${item.name}">${item.name}</a>
+        <a class="nav--item color-${item.name}" href="${item.name}">${item.name}</a>
     `);
     document.querySelector('nav').innerHTML = menuItems.join('');
 

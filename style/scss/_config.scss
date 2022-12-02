@@ -23,6 +23,11 @@ $color-complement-mintgreen: #1EC2A4;
 $font-antonio-headers: 'Antonio', sans-serif;
 $font-spartan-paragraph: 'League Spartan', sans-serif;
 
+body {
+    padding: 0;
+    margin: 0;
+}
+
 // Typography
 h1, h2, h3 {
     font-family: $font-antonio-headers;
@@ -62,6 +67,11 @@ p {
     font-weight: 400;
     font-size: 14px;
     line-height: 25px;
+}
+
+a {
+    font-family: $font-spartan-paragraph;
+    text-decoration: none;
 }
 
 // Document

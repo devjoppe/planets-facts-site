@@ -12,9 +12,21 @@
   width: 1440px;
   display: flex;
   height: inherit;
+  justify-content: space-between;
+}
+
+nav {
+  display: flex;
+  flex-direction: row;
 }
 
 .nav--item {
+  display: flex;
+  height: 85px;
+  align-items: center;
   font-size: 11px;
-
+  color: rgba(255, 255, 255, 0.75);
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-weight: 700;
 }

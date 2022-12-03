@@ -18,10 +18,23 @@ $color-complement-mintgreen: #1EC2A4;
 // Fonts - Antonio
 @import url('https://fonts.googleapis.com/css2?family=Antonio:wght@200;400;500;700&display=swap');
 // Fonts - Spartan
-@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@200;300;400;500;600;700&display=swap');
 
 $font-antonio-headers: 'Antonio', sans-serif;
 $font-spartan-paragraph: 'League Spartan', sans-serif;
+
+// Layout sizes
+$size-100-width: 1340px;
+$size-80-width: 1024px;
+
+// Mixins
+@mixin font-style {
+    font-family: $font-spartan-paragraph;
+    color: $color-primary-white;
+    font-weight: 200;
+    font-size: 18px;
+    line-height: 25px;
+}
 
 body {
     padding: 0;
@@ -32,12 +45,15 @@ body {
 h1, h2, h3 {
     font-family: $font-antonio-headers;
     color: $color-primary-white;
+    margin: 0;
+    padding: 0;
 }
 
 h1 {
     font-weight: 500;
     font-size: 80px;
     line-height: 103px;
+    text-transform: uppercase;
 }
 
 h2 {
@@ -62,11 +78,13 @@ h4 {
 }
 
 p {
-    font-family: $font-spartan-paragraph;
-    color: $color-primary-white;
-    font-weight: 200;
-    font-size: 14px;
-    line-height: 25px;
+    @include font-style;
+    margin: 0;
+    padding: 0;
+}
+
+span {
+    @include font-style;
 }
 
 a {
@@ -81,16 +99,20 @@ a {
 }
 
 body {
-    background: $color-primary-dark-blue;
+    background: $color-primary-dark-blue url("../../assets/background-stars.svg") repeat;
+    background-size: cover;
 }
 
 // Components
 button {
+    display: flex;
+    height: 56px;
+    align-items: center;
     font-family: $font-spartan-paragraph;
-    font-weight: 700;
-    font-size: 12px;
+    font-weight: 600;
+    font-size: 16px;
     line-height: 25px;
-    letter-spacing: 2.5px;
+    letter-spacing: 3.2px;
     color: $color-primary-white;
     background: $color-primary-dark-blue;
     border: 1px solid $color-primary-middle-blue;
@@ -98,6 +120,7 @@ button {
     text-transform: uppercase;
     cursor: pointer;
     span {
+        font-weight: 500;
         margin-right: 28px;
         color: $color-primary-white;
         opacity: 0.5;

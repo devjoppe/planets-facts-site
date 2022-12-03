@@ -42,8 +42,10 @@ document.querySelector('nav').addEventListener('click', (e) => {
 
 // Click the category button
 document.querySelector('.content-description').addEventListener('click', (e) => {
-    if(e.target.tagName === 'BUTTON') {
-        console.log('YEP');
+    if(e.target.tagName === 'BUTTON' && !e.target.classList.contains('selected')) {
+        e.target.classList.add('selected');
+    } else {
+        //TODO Begin thinking about how to solve this?
     }
 })
 

@@ -8,10 +8,18 @@
   justify-content: center;
 }
 
+.wrapper {
+  display: flex;
+  width: 1340px;
+  flex-direction: column;
+}
+
 .header--wrapper {
-  width: 1440px;
+  width: 1340px;
   display: flex;
   height: inherit;
+  padding: 0 40px 0 40px;
+  box-sizing: border-box;
   justify-content: space-between;
 }
 
@@ -37,7 +45,7 @@ nav {
   display: flex;
   height: 85px;
   align-items: center;
-  font-size: 11px;
+  font-size: 13px;
   color: rgba(255, 255, 255, 0.75);
   letter-spacing: 1px;
   text-transform: uppercase;
@@ -49,7 +57,7 @@ nav {
     margin-right: 0;
   }
   &:hover{
-    border-top: 3px solid red;
+    border-top: 3px solid var(--planet-color);
     opacity: 1;
   }
 }

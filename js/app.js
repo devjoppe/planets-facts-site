@@ -41,11 +41,16 @@ document.querySelector('nav').addEventListener('click', (e) => {
 })
 
 // Click the category button
-document.querySelector('.content-description').addEventListener('click', (e) => {
+document.querySelector('.content-description').addEventListener('click',  (e) => {
+
+    const disabledButtons = document.querySelectorAll('button');
+
+    disabledButtons.forEach(button => {
+        button.classList.remove('selected');
+    })
+
     if(e.target.tagName === 'BUTTON' && !e.target.classList.contains('selected')) {
         e.target.classList.add('selected');
-    } else {
-        //TODO Begin thinking about how to solve this?
     }
 })
 

@@ -22,6 +22,7 @@ h1 {
 }
 
 .content-image {
+  position: relative;
   display: flex;
   flex: 1;
   align-items: center;
@@ -30,6 +31,12 @@ h1 {
     display: block;
     width: var(--image-selected);
     height: auto;
+    &.surface {
+      position: absolute;
+      top: 430px;
+      height: 199px;
+      width: 163px;
+    }
   }
 }
 

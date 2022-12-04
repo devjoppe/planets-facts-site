@@ -55,7 +55,7 @@
       "geology": "./assets/geology-venus.png"
     },
     "color": "#EDA249",
-    "planetsize": "290px"
+    "planetsize": "400px"
   },
   {
     "name": "Earth",
@@ -84,7 +84,7 @@
       "geology": "./assets/geology-earth.png"
     },
     "color": "#6D2ED5",
-    "planetsize": "290px"
+    "planetsize": "450px"
   },
   {
     "name": "Mars",
@@ -113,7 +113,7 @@
       "geology": "./assets/geology-mars.png"
     },
     "color": "#D14C32",
-    "planetsize": "290px"
+    "planetsize": "336px"
   },
   {
     "name": "Jupiter",
@@ -142,7 +142,7 @@
       "geology": "./assets/geology-jupiter.png"
     },
     "color": "#D83A34",
-    "planetsize": "290px"
+    "planetsize": "580px"
   },
   {
     "name": "Saturn",
@@ -171,7 +171,7 @@
       "geology": "./assets/geology-saturn.png"
     },
     "color": "#CD5120",
-    "planetsize": "290px"
+    "planetsize": "660px"
   },
   {
     "name": "Uranus",
@@ -200,7 +200,7 @@
       "geology": "./assets/geology-uranus.png"
     },
     "color": "#1EC1A2",
-    "planetsize": "290px"
+    "planetsize": "458px"
   },
   {
     "name": "Neptune",
@@ -229,6 +229,6 @@
       "geology": "./assets/geology-neptune.png"
     },
     "color": "#2D68F0",
-    "planetsize": "290px"
+    "planetsize": "450px"
   }
 ]

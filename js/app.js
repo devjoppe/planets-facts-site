@@ -52,10 +52,22 @@ const renderDesc = textType => {
 
 // Renders the planet image
 const renderImage = imageType => {
-    document.querySelector('.content-image').innerHTML = planetData.filter(item => item.name === setPlanet)
-        .map(content => `
-            <img alt="planet image of the ${content[imageType].type}" style="--image-selected: ${content.planetsize}" src="${content.images[imageType]}">
-        `).join('');
+
+    const selectedPlanet = planetData.filter(item => item.name === setPlanet);
+    const imageEL = document.querySelector('.content-image');
+
+    if(imageType === 'geology') {
+        imageEL.innerHTML = selectedPlanet
+            .map(content => `
+                <img alt="planet image of the ${content[imageType].type}" style="--image-selected: ${content.planetsize}" src="${content.images.overview}">
+                <img alt="The surface of ${content.name}" src="${content.images[imageType]}" class="surface">
+            `).join('');
+    } else {
+        imageEL.innerHTML = selectedPlanet
+            .map(content => `
+                <img alt="planet image of the ${content[imageType].type}" style="--image-selected: ${content.planetsize}" src="${content.images[imageType]}">
+            `).join('');
+    }
 }
 
 // Click the main menu

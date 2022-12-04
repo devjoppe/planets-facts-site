@@ -1,4 +1,5 @@
 let planetData = [];
+let setPlanet = ``;
 
 // Renders the menu
 const renderMenu = async () => {
@@ -14,22 +15,38 @@ const renderMenu = async () => {
 
 // Renders the main content
 const renderMain = planet => {
-    document.querySelector('.content-description').innerHTML = planetData.filter(item => item.name === planet).map(content => `
+    setPlanet = planet;
+    document.querySelector('.content-description').innerHTML = planetData.filter(item => item.name === setPlanet).map(content => `
         <h1 class="title">${content.name}</h1>
-        <p class="description">${content.overview.content}</p>
-        <span class="source-link">Source : 
-            <a href="${content.overview.source}">Wikipedia</a>
-            <img alt="Read more on Wikipedia" src="assets/icon-source.svg">
-        </span>
+        <div class="description-wrapper">
+            <!-- Description text -->
+        </div>
         <div class="category">
-            <button class="category-button selected" style="--color-selected: ${content.color}">
+            <button class="category-button selected" data-category="${content.overview.type}" style="--color-selected: ${content.color}">
                 <span>01</span>Overview
             </button>
-            <button class="category-button" style="--color-selected: ${content.color}">
+            <button class="category-button" data-category="${content.structure.type}" style="--color-selected: ${content.color}">
                 <span>02</span>Internal structure
+            </button>
+            <button class="category-button" data-category="${content.geology.type}" style="--color-selected: ${content.color}">
+                <span>03</span>Surface geology
             </button>
         </div>
     `).join('');
+
+    renderDesc('overview');
+}
+
+// Renders the content of the selected category
+const renderDesc = textType => {
+    document.querySelector('.description-wrapper').innerHTML = planetData.filter(item => item.name === setPlanet)
+        .map(content => `
+            <p class="description">${content[textType].content}</p>
+            <span class="source-link">Source : 
+                <a href="${content[textType].source}" target="_blank">Wikipedia</a>
+                <img alt="Read more on Wikipedia" src="assets/icon-source.svg">
+            </span>
+        `).join('');
 }
 
 // Click the main menu
@@ -47,11 +64,12 @@ document.querySelector('.content-description').addEventListener('click',  (e) =>
 
     disabledButtons.forEach(button => {
         button.classList.remove('selected');
-    })
+    });
 
     if(e.target.tagName === 'BUTTON' && !e.target.classList.contains('selected')) {
         e.target.classList.add('selected');
     }
+    renderDesc(e.target.dataset.category);
 })
 
 renderMenu();

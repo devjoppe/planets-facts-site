@@ -26,6 +26,10 @@ h1 {
   flex: 1;
 }
 
+.description-wrapper {
+  margin-bottom: 40px;
+}
+
 .content-description {
   display: flex;
   flex-direction: column;
@@ -38,7 +42,6 @@ h1 {
 
 .source-link {
   opacity: 0.5;
-  margin-bottom: 40px;
   a {
     color: config.$color-primary-white;
     font-weight: 600;

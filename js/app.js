@@ -47,6 +47,15 @@ const renderDesc = textType => {
                 <img alt="Read more on Wikipedia" src="assets/icon-source.svg">
             </span>
         `).join('');
+    renderImage(textType);
+}
+
+// Renders the planet image
+const renderImage = imageType => {
+    document.querySelector('.content-image').innerHTML = planetData.filter(item => item.name === setPlanet)
+        .map(content => `
+            <img alt="planet image of the ${content[imageType].type}" style="--image-selected: ${content.planetsize}" src="${content.images[imageType]}">
+        `).join('');
 }
 
 // Click the main menu

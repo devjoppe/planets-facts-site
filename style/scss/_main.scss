@@ -71,3 +71,39 @@ h1 {
     background: var(--color-selected);
   }
 }
+
+.planet-data {
+  display: flex;
+  width: config.$size-100-width;
+  margin-top: 90px;
+  grid-template-columns: auto auto auto auto;
+  grid-template-rows: 130px;
+  column-gap: 30px;
+  padding-right: 165px;
+  box-sizing: border-box;
+}
+
+.data-item {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 130px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-sizing: border-box;
+  padding: 25px;
+  .data-title {
+    color: rgba(255, 255, 255, 0.5);
+    text-transform: uppercase;
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    margin-bottom: 12px;
+  }
+  .data-content {
+    font-family: config.$font-antonio-headers;
+    font-size: 40px;
+    font-weight: 500;
+    letter-spacing: -1.5px;
+    text-transform: uppercase;
+  }
+}

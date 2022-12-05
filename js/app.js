@@ -35,6 +35,7 @@ const renderMain = planet => {
     `).join('');
 
     renderDesc('overview');
+    renderData(setPlanet);
 }
 
 // Renders the content of the selected category
@@ -68,6 +69,28 @@ const renderImage = imageType => {
                 <img alt="planet image of the ${content[imageType].type}" style="--image-selected: ${content.planetsize}" src="${content.images[imageType]}">
             `).join('');
     }
+}
+
+//Render planet data
+const renderData = planet => {
+    document.querySelector('.planet-data').innerHTML = planetData.filter(item => item.name === planet).map(content => `
+        <div class="data-item">
+          <span class="data-title">Rotation time</span>
+          <span class="data-content">${content.rotation}</span>
+        </div>
+        <div class="data-item">
+          <span class="data-title">Revolution time</span>
+          <span class="data-content">${content.revolution}</span>
+        </div>
+        <div class="data-item">
+          <span class="data-title">Radius</span>
+          <span class="data-content">${content.radius}</span>
+        </div>
+        <div class="data-item">
+          <span class="data-title">Average temp.</span>
+          <span class="data-content">${content.temperature}</span>
+        </div>
+    `).join('');
 }
 
 // Click the main menu

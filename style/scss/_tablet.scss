@@ -1,0 +1,74 @@
+@use 'config';
+
+// Tablet design
+@media (max-width: 1280px) {
+  .planet-data {
+    padding-left: 165px;
+  }
+}
+
+@media (max-width: 860px) {
+  h1 {
+    &.title {
+      margin: 0 0 18px 0;
+      font-size: 56px;
+    }
+  }
+  p {
+    font-size: 16px;
+  }
+  button {
+    font-size: 14px;
+    height: 48px;
+    span {
+      font-size: 14px;
+    }
+  }
+  .planet-content {
+    flex-direction: column;
+    width: 100%;
+    padding: 0;
+  }
+  .content-description {
+    flex-direction: row;
+    width: 100%;
+    padding: 0 48px 0 48px;
+    box-sizing: border-box;
+  }
+  .description-wrapper {
+    margin-bottom: 0;
+  }
+  .content-image {
+    flex: none;
+    height: 450px;
+    img {
+      width: calc(var(--image-selected) / 1.5);
+    }
+  }
+  .planet-data {
+    margin-top: 56px;
+    padding: 0 48px 0 48px;
+    width: 100%;
+  }
+  .content-wrapper {
+    width: 50%;
+    margin-right: 24px;
+  }
+  .category {
+    margin-left: 24px;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+  }
+  .data-item {
+    height: 110px;
+    padding: 15px;
+    .data-title {
+      font-size: 12px;
+    }
+    .data-content {
+      font-size: 28px;
+    }
+  }
+}

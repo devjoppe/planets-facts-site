@@ -17,9 +17,11 @@ const renderMenu = async () => {
 const renderMain = planet => {
     setPlanet = planet;
     document.querySelector('.content-description').innerHTML = planetData.filter(item => item.name === setPlanet).map(content => `
-        <h1 class="title">${content.name}</h1>
-        <div class="description-wrapper">
-            <!-- Description text -->
+        <div class="content-wrapper">
+            <h1 class="title">${content.name}</h1>
+            <div class="description-wrapper">
+                <!-- Description text -->
+            </div>
         </div>
         <div class="category">
             <button class="category-button selected" data-category="${content.overview.type}" style="--color-selected: ${content.color}">

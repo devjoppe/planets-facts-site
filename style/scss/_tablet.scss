@@ -24,6 +24,26 @@
       font-size: 14px;
     }
   }
+  .header {
+    height: 120px;
+  }
+  .header--wrapper {
+    width: 100%;
+    flex-direction: column;
+  }
+  .logo {
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  nav {
+    justify-content: center;
+  }
+  .nav--item {
+    &:hover {
+      border-top: none;
+    }
+  }
   .planet-content {
     flex-direction: column;
     width: 100%;

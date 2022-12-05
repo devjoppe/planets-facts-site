@@ -23,6 +23,20 @@ const renderMain = planet => {
                 <!-- Description text -->
             </div>
         </div>
+        <div class="category-wrapper">
+            <!-- Category buttons -->
+        </div>
+    `).join('');
+
+    renderDesc('overview');
+    renderDataBt(setPlanet);
+    renderData(setPlanet);
+}
+
+// Render the data buttons
+const renderDataBt = planet => {
+    const categoryEL = document.querySelectorAll('.category-wrapper');
+    const categoryButtons = planetData.filter(item => item.name === setPlanet).map(content => `
         <div class="category">
             <button class="category-button selected" data-category="${content.overview.type}" style="--color-selected: ${content.color}">
                 <span>01</span>Overview
@@ -35,9 +49,9 @@ const renderMain = planet => {
             </button>
         </div>
     `).join('');
-
-    renderDesc('overview');
-    renderData(setPlanet);
+    categoryEL.forEach(item => {
+        item.innerHTML = categoryButtons;
+    })
 }
 
 // Renders the content of the selected category
@@ -74,6 +88,7 @@ const renderImage = imageType => {
 }
 
 //Render planet data
+//TODO Add this to a div that only displays in mobile mode.
 const renderData = planet => {
     document.querySelector('.planet-data').innerHTML = planetData.filter(item => item.name === planet).map(content => `
         <div class="data-item">

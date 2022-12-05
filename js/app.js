@@ -23,7 +23,7 @@ const renderMain = planet => {
                 <!-- Description text -->
             </div>
         </div>
-        <div class="category-wrapper">
+        <div class="category-wrapper d-desktop--tablet">
             <!-- Category buttons -->
         </div>
     `).join('');
@@ -36,7 +36,7 @@ const renderMain = planet => {
 // Render the data buttons
 const renderDataBt = planet => {
     const categoryEL = document.querySelectorAll('.category-wrapper');
-    const categoryButtons = planetData.filter(item => item.name === setPlanet).map(content => `
+    const categoryButtons = planetData.filter(item => item.name === planet).map(content => `
         <div class="category">
             <button class="category-button selected" data-category="${content.overview.type}" style="--color-selected: ${content.color}">
                 <span>01</span>Overview
@@ -49,8 +49,13 @@ const renderDataBt = planet => {
             </button>
         </div>
     `).join('');
+
     categoryEL.forEach(item => {
-        item.innerHTML = categoryButtons;
+        if(item.classList.contains('d-mobile')) {
+            item.innerHTML = categoryButtons.replace('Surface','').replace('Internal', '');
+        } else {
+            item.innerHTML = categoryButtons;
+        }
     })
 }
 
@@ -119,7 +124,7 @@ document.querySelector('nav').addEventListener('click', (e) => {
 })
 
 // Click the category button
-document.querySelector('.content-description').addEventListener('click',  (e) => {
+document.querySelector('.category-wrapper').addEventListener('click',  (e) => {
 
     const disabledButtons = document.querySelectorAll('button');
 

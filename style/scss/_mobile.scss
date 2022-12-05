@@ -1,6 +1,67 @@
-@user 'config';
+@use 'config';
 
 // Mobile design
 @media (max-width: 490px) {
-  
+  h1 {
+    line-height: 50px;
+    &.title {
+      font-size: 48px;
+      margin-bottom: 24px;
+    }
+  }
+  .description {
+    margin-bottom: 32px;
+  }
+  .d-desktop--tablet {
+    display: none;
+  }
+  .d-mobile {
+    z-index: 10; // Can delete this one later
+  }
+  .category-wrapper {
+    width: 100%;
+  }
+  .category {
+    flex-direction: row;
+    width: 100%;
+  }
+  button {
+    font-size: 12px;
+    span {
+      display: none;
+    }
+  }
+  .content-wrapper {
+    width: 100%;
+    margin-right: 0;
+    text-align: center;
+  }
+  .planet-data {
+    flex-direction: column;
+    margin-top: 32px;
+  }
+  .content-image {
+    height: 380px;
+    img {
+      width: calc(var(--image-selected) / 2);
+    }
+  }
+  .data-item {
+    flex-direction: row;
+    align-items: center;
+    height: 70px;
+    padding: 0 24px 0 24px;
+    box-sizing: border-box;
+    justify-content: space-between;
+    margin-bottom: 12px;
+    .data-title {
+      margin-bottom: 0;
+    }
+    .data-content {
+      font-size: 24px;
+    }
+    &:last-child {
+      margin-bottom: 48px;
+    }
+  }
 }

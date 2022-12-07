@@ -64,6 +64,12 @@
     img {
       width: calc(var(--image-selected) / 1.5);
     }
+  }.content-image {
+    flex: none;
+    height: 450px;
+    img {
+      width: calc(var(--image-selected) / 1.5);
+    }
   }
   .planet-data {
     margin-top: 56px;

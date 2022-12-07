@@ -2,12 +2,16 @@
 
 // Mobile design
 @media (max-width: 490px) {
+
   h1 {
     line-height: 50px;
     &.title {
       font-size: 48px;
       margin-bottom: 24px;
     }
+  }
+  .header--wrapper {
+    padding: 0;
   }
   .description {
     margin-bottom: 32px;
@@ -16,19 +20,40 @@
     display: none;
   }
   .d-mobile {
+    display: flex;
     z-index: 10; // Can delete this one later
   }
+  .d-display-none {
+    display: none;
+  }
   .category-wrapper {
+    //display: flex;
     width: 100%;
   }
   .category {
     flex-direction: row;
     width: 100%;
+    justify-content: space-between;
+    margin: 0;
+    padding: 0 48px 0 48px;
+    align-items: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
   }
   button {
     font-size: 12px;
+    border: none;
+    padding: 12px 0 12px 0;
     span {
       display: none;
+    }
+  }
+  .category-button {
+    width: auto;
+    margin-bottom: 0;
+    padding-top: 16px;
+    &.selected {
+      background: none;
+      border-bottom: 5px solid var(--color-selected);
     }
   }
   .content-wrapper {
@@ -62,6 +87,19 @@
     }
     &:last-child {
       margin-bottom: 48px;
+    }
+  }
+  .nav--menu {
+    display: flex;
+    align-items: center;
+    height: inherit;
+    justify-content: space-between;
+    margin: 0 48px 0 48px;
+  }
+  .logo {
+    margin-top: 0;
+    span {
+      font-size: 32px;
     }
   }
 }

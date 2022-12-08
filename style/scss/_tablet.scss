@@ -44,6 +44,9 @@
       border-top: none;
     }
   }
+  .nav--menu {
+    flex-direction: column;
+  }
   .planet-content {
     flex-direction: column;
     width: 100%;
@@ -63,12 +66,12 @@
     height: 450px;
     img {
       width: calc(var(--image-selected) / 1.5);
-    }
-  }.content-image {
-    flex: none;
-    height: 450px;
-    img {
-      width: calc(var(--image-selected) / 1.5);
+      &.surface {
+        position: absolute;
+        top: 260px;
+        height: calc((199px)/1.3);
+        width: calc((163px)/1.3);
+      }
     }
   }
   .planet-data {
@@ -82,7 +85,7 @@
   }
   .category {
     margin-left: 24px;
-    width: 50%;
+    width: auto;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
@@ -96,5 +99,9 @@
     .data-content {
       font-size: 28px;
     }
+  }
+  .d-desktop--tablet {
+    display: flex;
+    align-items: flex-end;
   }
 }

@@ -129,21 +129,23 @@ document.querySelector('nav').addEventListener('click', (e) => {
 })
 
 // Click the category button
-document.querySelector('.category-wrapper').addEventListener('click',  (e) => {
-    console.log('clicking the button', e);
-    const disabledButtons = document.querySelectorAll('button');
+document.querySelector('body').addEventListener('click',  (e) => {
 
-    disabledButtons.forEach(button => {
-        button.classList.remove('selected');
-    });
+    if(e.target.tagName === 'BUTTON') {
 
-    if(e.target.tagName === 'BUTTON' && !e.target.classList.contains('selected')) {
-        e.target.classList.add('selected');
+        const disabledButtons = document.querySelectorAll('button');
+        disabledButtons.forEach(button => {
+            button.classList.remove('selected');
+        });
+
+        if (!e.target.classList.contains('selected')) {
+            e.target.classList.add('selected');
+        }
+        renderDesc(e.target.dataset.category);
     }
-    renderDesc(e.target.dataset.category);
 })
 
-//Clicking the mobile hamburger icon
+// Clicking the mobile hamburger icon
 document.querySelector('.mobile-menu').addEventListener('click',() => {
     document.querySelector('nav').classList.toggle('d-display-none');
     document.querySelector('.mobile-menu').classList.toggle('selected');

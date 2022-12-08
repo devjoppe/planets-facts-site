@@ -10,6 +10,9 @@
       margin-bottom: 24px;
     }
   }
+  .header {
+    height: 135px;
+  }
   .header--wrapper {
     padding: 0;
   }
@@ -51,6 +54,7 @@
     width: auto;
     margin-bottom: 0;
     padding-top: 16px;
+    height: 66px;
     &.selected {
       background: none;
       border-bottom: 5px solid var(--color-selected);
@@ -64,6 +68,7 @@
   .planet-data {
     flex-direction: column;
     margin-top: 32px;
+    margin-bottom: 32px;
     padding: 0 24px 0 24px;
   }
   .content-image {
@@ -95,7 +100,7 @@
       font-size: 24px;
     }
     &:last-child {
-      margin-bottom: 48px;
+      margin-bottom: 0;
     }
   }
   nav {
@@ -117,8 +122,10 @@
     height: inherit;
     justify-content: space-between;
     margin: 0 24px 0 24px;
+    width: auto;
   }
   .mobile-menu {
+    display: block;
     &.selected {
       opacity: 0.3;
     }

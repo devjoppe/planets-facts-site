@@ -76,6 +76,7 @@ h1 {
   display: flex;
   width: config.$size-100-width;
   margin-top: 90px;
+  margin-bottom: 48px;
   grid-template-columns: auto auto auto auto;
   grid-template-rows: 130px;
   column-gap: 30px;
@@ -106,4 +107,19 @@ h1 {
     letter-spacing: -1.5px;
     text-transform: uppercase;
   }
+}
+
+.d-mobile {
+  height: inherit;
+  display: none;
+}
+
+.mobile-menu {
+  display: none;
+}
+
+.nav--menu {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
 }

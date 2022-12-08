@@ -130,7 +130,7 @@ document.querySelector('nav').addEventListener('click', (e) => {
 
 // Click the category button
 document.querySelector('.category-wrapper').addEventListener('click',  (e) => {
-
+    console.log('clicking the button', e);
     const disabledButtons = document.querySelectorAll('button');
 
     disabledButtons.forEach(button => {

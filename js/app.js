@@ -93,7 +93,6 @@ const renderImage = imageType => {
 }
 
 //Render planet data
-//TODO Add this to a div that only displays in mobile mode.
 const renderData = planet => {
     document.querySelector('.planet-data').innerHTML = planetData.filter(item => item.name === planet).map(content => `
         <div class="data-item">
@@ -121,6 +120,12 @@ document.querySelector('nav').addEventListener('click', (e) => {
     if(e.target.tagName === 'A') {
         renderMain(e.target.getAttribute('href'));
     }
+
+    const mainNavEl = document.querySelector('nav');
+    if(!mainNavEl.classList.contains('d-display-none')) {
+        mainNavEl.classList.add('d-display-none');
+        document.querySelector('.mobile-menu').classList.remove('selected');
+    }
 })
 
 // Click the category button
@@ -136,6 +141,12 @@ document.querySelector('.category-wrapper').addEventListener('click',  (e) => {
         e.target.classList.add('selected');
     }
     renderDesc(e.target.dataset.category);
+})
+
+//Clicking the mobile hamburger icon
+document.querySelector('.mobile-menu').addEventListener('click',() => {
+    document.querySelector('nav').classList.toggle('d-display-none');
+    document.querySelector('.mobile-menu').classList.toggle('selected');
 })
 
 renderMenu();

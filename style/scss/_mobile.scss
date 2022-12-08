@@ -35,7 +35,7 @@
     width: 100%;
     justify-content: space-between;
     margin: 0;
-    padding: 0 48px 0 48px;
+    padding: 0 24px 0 24px;
     align-items: center;
     border-top: 1px solid rgba(255, 255, 255, 0.2);
   }
@@ -64,12 +64,21 @@
   .planet-data {
     flex-direction: column;
     margin-top: 32px;
+    padding: 0 24px 0 24px;
   }
   .content-image {
     height: 380px;
     img {
       width: calc(var(--image-selected) / 2);
+      &.surface {
+        top: 215px;
+        height: 130px;
+        width: auto;
+      }
     }
+  }
+  .content-description {
+    padding: 0 24px 0 24px;
   }
   .data-item {
     flex-direction: row;
